@@ -7,6 +7,7 @@ import java.lang.*;
 public class Main {
     static Dotenv dotenv = Dotenv.load();
     static String token = dotenv.get("TOKEN");
+
     public static void main(String[] args) {
         JDABuilder jdaBuilder = JDABuilder.createDefault(token);
         jdaBuilder.enableIntents(GatewayIntent.MESSAGE_CONTENT, GatewayIntent.GUILD_MESSAGES);
